@@ -16,12 +16,16 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField("String", "API_KEY", "\"token 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\"")
-        buildConfigField("String", "BASE_URL", "\"https://api.github.com/\"")
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "API_KEY", "\"token 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\"")
+            buildConfigField("String", "BASE_URL", "\"https://api.github.com/\"")
+        }
         release {
+            buildConfigField("String", "API_KEY", "\"token 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\"")
+            buildConfigField("String", "BASE_URL", "\"https://api.github.com/\"")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
